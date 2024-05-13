@@ -203,3 +203,15 @@
  includeInlayParameterNameHintsWhenArgumentMatchesName = true
  includeInlayPropertyDeclarationTypeHints = true
  includeInlayVariableTypeHints = true
+
+[[language]]
+name = "kdl"
+scope = "source.kdl"
+file-types = ["kdl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+injection-regex = "kdl"
+
+[[grammar]]
+name = "kdl"
+source = { git = "https://github.com/amaanq/tree-sitter-kdl" }
