@@ -1,0 +1,91 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "absolute"
+mouse = true
+true-color = true
+idle-timeout = 0
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-c = ":primary-clipboard-yank"
+C-v = ["delete_selection_noyank", ":primary-clipboard-paste-replace"]
+S-ins = "replace_with_yanked"
+C-o = "file_picker_in_current_directory" 
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["open_below", "normal_mode"] # Maps the enter keyhen re-enter normal
+F2 = "insert_mode"
+F3 = "toggle_comments"
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+C-right = "move_next_long_word_start"
+C-left = "move_prev_long_word_start"
+C-S-right = "extend_next_long_word_start"
+C-S-left = "extend_prev_long_word_start"
+pageup = "page_cursor_half_up"
+pagedown = "page_cursor_half_down"
+C-u = "undo"
+C-r = "redo"
+C-f = "global_search"
+C-a = "select_all"
+A-o = "buffer_picker"
+del = "delete_selection_noyank"
+backspace = "delete_char_backward"
+"A-down" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-up" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+"A-J" = [ "extend_to_line_bounds", "yank", "paste_after" ]
+"A-K" = [ "extend_to_line_bounds", "yank", "paste_before" ]
+"F11"=":config-open"
+"F12"=":config-reload"
+S-A-f = ":format"
+C-L = ["search_selection", "select_all", "select_regex"]
+
+
+
+[keys.insert]
+C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-c = "yank_to_primary_clipboard"
+C-v = ["delete_selection_noyank", ":primary-clipboard-paste-replace"]
+S-ins = "replace_with_yanked"
+C-x = "delete_selection"
+C-u = "undo"
+C-r = "redo"
+C-o = "file_picker_in_current_directory"
+C-a = "select_all"
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+C-right = "move_next_word_start"
+C-left = "move_prev_word_start"
+C-S-right = "extend_next_word_start"
+C-S-left = "extend_prev_word_start"
+F3 = "toggle_comments"
+pageup = "page_cursor_half_up"
+pagedown = "page_cursor_half_down"
+C-f = "search"
+A-o = "buffer_picker"
+del = "delete_selection_noyank"
+"A-down" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-up" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+"A-J" = [ "extend_to_line_bounds", "yank", "paste_after" ]
+"A-K" = [ "extend_to_line_bounds", "yank", "paste_before" ]
+"F11"=":config-open"
+"F12"=":config-reload"
+S-A-f = ":format"
+C-L = ["search_selection", "select_all", "select_regex"]
